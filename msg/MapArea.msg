@@ -1,3 +1,3 @@
 string name
+uint8 area_type
 geometry_msgs/Polygon area
-geometry_msgs/Polygon[] obstacles
