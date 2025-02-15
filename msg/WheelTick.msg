@@ -9,7 +9,7 @@ uint8   WHEEL_VALID_RR=8
 
 time stamp
 float64 wheel_radius    
-#float64 wheel_separation
+float64 wheel_separation
 float64 wheel_pos_to_tick_factor # factor to use to convert wheel pos to ticks (for use in F9R)
 uint8  valid_wheels        # Bitfield to show which ticks are valid
 uint8 wheel_direction_fl   # wheel direction front left
