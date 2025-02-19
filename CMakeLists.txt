@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
         FILES
         AbsolutePose.msg
-        WheelTick.msg
+        #WheelTick.msg
         SensorInfo.msg
         SensorDataString.msg
         SensorDataDouble.msg
