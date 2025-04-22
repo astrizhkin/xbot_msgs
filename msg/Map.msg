@@ -1,3 +1,4 @@
+string name
 float64 mapWidth
 float64 mapHeight
 float64 mapCenterX
@@ -6,3 +7,6 @@ xbot_msgs/MapArea[] areas
 float64 dockX
 float64 dockY
 float64 dockHeading
+float64 baseX
+float64 baseY
+float64 baseZ
