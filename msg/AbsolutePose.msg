@@ -16,11 +16,11 @@ uint16 FLAG_GPS_DEAD_RECKONING=8        # True, if the GPS module is currently d
 uint16 FLAG_SENSOR_FUSION_RECENT_ABSOLUTE_POSE=1    # True, if we have a recent absolute position measurement (e.g. RTK GPS)
 uint16 FLAG_SENSOR_FUSION_DEAD_RECKONING=8          # True, if we have dead reckoning
 
-
-
 std_msgs/Header header
-uint32 sensor_stamp                     # A timestamp sent by the sensor, 0 for source = sensor fusion
-uint32 received_stamp                   # A timestamp taken on receive, 0 for source = sensor fusion
+int64 position_stamp_ms                # A timestamp in ms for position values, 0 for source = sensor fusion
+int64 speed_stamp_ms                   # A timestamp in ms for speed/heading values, 0 for source = sensor fusion
+int64 deviation_stamp_ms               # A timestamp in ms for deviation value, 0 for source = sensor fusion
+int64 received_stamp                   # A timestamp in ms taken on receive, 0 for source = sensor fusion
 
 uint8 source
 uint16 flags                            # Flags specific to the source
