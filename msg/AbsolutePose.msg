@@ -17,15 +17,15 @@ uint16 FLAG_SENSOR_FUSION_RECENT_ABSOLUTE_POSE=1    # True, if we have a recent 
 uint16 FLAG_SENSOR_FUSION_DEAD_RECKONING=8          # True, if we have dead reckoning
 
 std_msgs/Header header
-int64 position_stamp_ms                # A timestamp in ms for position values, 0 for source = sensor fusion
-int64 speed_stamp_ms                   # A timestamp in ms for speed/heading values, 0 for source = sensor fusion
-int64 deviation_stamp_ms               # A timestamp in ms for deviation value, 0 for source = sensor fusion
-int64 received_stamp                   # A timestamp in ms taken on receive, 0 for source = sensor fusion
+uint64 epoch_ms                         # A timestamp in ms of the data, 0 for source = sensor fusion
+uint64 received_stamp                   # A timestamp in ms taken on receive, 0 for source = sensor fusion
 
 uint8 source
 uint16 flags                            # Flags specific to the source
-uint8 orientation_valid                 # Set to true, if the sensor can also measure orientation. This applies to orientation and vehicle_heading
-uint8 motion_vector_valid               # Set to true, if the speed vector is valid. This also applies to the motion_heading.
+bool orientation_valid                  # Set to true, if the sensor can also measure orientation. This applies to orientation and vehicle_heading
+bool motion_vector_valid                # Set to true, if the motion_vector is valid. This also applies to the motion_heading.
+bool pose_valid                         # Set to true, if the pose is valid
+bool position_accuracy_valid            # Set to true, if the position_accuracy is valid
 float32 position_accuracy               # Set to the estimated accuracy in m
 float32 orientation_accuracy            # Set to the estimated orientation accuracy in rad
 geometry_msgs/PoseWithCovariance pose   # The pose measured by the sensor
