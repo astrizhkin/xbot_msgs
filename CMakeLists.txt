@@ -4,6 +4,7 @@ project(xbot_msgs)
 find_package(catkin REQUIRED COMPONENTS
         std_msgs
         geometry_msgs
+        nav_msgs
         message_generation)
 
 
@@ -33,6 +34,7 @@ add_service_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
         DEPENDENCIES
+        nav_msgs
         std_msgs
         geometry_msgs
 )
