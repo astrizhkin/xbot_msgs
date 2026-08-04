@@ -11,3 +11,6 @@ int16 current_path
 int16 current_pose_index
 xbot_msgs/AbsolutePose robot_pose
 nav_msgs/Odometry robot_odom_3d
+uint8 state                         # Raw state uint8 (0=NULL, 1=IDLE, 2=AUTONOMOUS, 3=RECORDING)
+uint8 emergency_high_level          # High-level ROS emergency bitmask
+uint8 emergency_low_level           # Low-level LL board emergency bitmask

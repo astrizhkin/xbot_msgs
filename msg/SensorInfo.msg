@@ -35,3 +35,4 @@ bool has_critical_low                   # True, if there's a lower bound that's 
 float64 lower_critical_value            # Any value below this is considered critical
 bool has_critical_high                  # True, if there's an upper bound that's considered critical
 float64 upper_critical_value            # Any value above this is considered critical
+uint16 e3_key                           # E3 sensor key (0x04xx), 0 if not assigned
