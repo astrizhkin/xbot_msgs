@@ -4,7 +4,7 @@ std_msgs/Header header
 
 # --- Base station from RTCM 1005 (Stationary RTK Reference Station ARP) ---
 # Coordinates converted from ECEF to WGS84
-bool     has_rtcm1005
+float64  rtcm1005_age_sec    # Seconds since last RTCM 1005 received (0 if never)
 uint32   base_station_id
 float64  base_lat_deg
 float64  base_lon_deg
